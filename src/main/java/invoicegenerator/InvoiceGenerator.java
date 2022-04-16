@@ -9,4 +9,12 @@ public class InvoiceGenerator {
         if(fare<MINIMUM_FARE) return MINIMUM_FARE;
         return fare;
     }
+
+    public double calculateMultipleRidesFare(Ride[] rides) {
+        double fare = 0;
+        for(int i = 0;i<rides.length;i++){
+            fare+=calculateFare(rides[i].getDistance(),rides[i].getTime());
+        }
+        return fare;
+    }
 }
