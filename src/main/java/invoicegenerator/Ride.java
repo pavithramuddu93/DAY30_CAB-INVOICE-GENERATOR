@@ -1,5 +1,6 @@
 package invoicegenerator;
 
+
 public class Ride {
     private  double distance;
     private int time;
